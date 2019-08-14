@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <MageKenya_Paysurev>
+            <version>0.0.1</version>
+        </MageKenya_Paysurev>
+    </modules>
+
+    <global>
+
+        <models>
+            <paysurev>
+                <class>MageKenya_Paysurev_Model</class>
+            </paysurev>
+        </models>
+
+        <blocks>
+            <paysurev>
+                <class>MageKenya_Paysurev_Block</class>
+            </paysurev>
+        </blocks>
+
+        <resources>
+            <paysure_setup>
+                <setup>
+                    <module>MageKenya_Paysurev</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </paysure_setup>
+            <paysure_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </paysure_write>
+            <paysure_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </paysure_read>
+        </resources>
+        <helpers>
+            <paysurev>
+                <class>MageKenya_Paysurev_Helper</class>
+            </paysurev>
+        </helpers>
+    </global>
+
+
+    <frontend>
+        <secure_url>
+            <paysure_redirect>/paysurev/redirect/00</paysure_redirect>
+        </secure_url>
+        <routers>
+            <paysurev>
+                <use>standard</use>
+                <args>
+                    <module>MageKenya_Paysurev</module>
+                    <frontName>paysurev</frontName>
+                </args>
+            </paysurev>
+        </routers>
+        <translate>
+            <modules>
+                <MageKenya_Paysurev>
+                    <files>
+                        <default>MageKenya_Paysurev.csv</default>
+                    </files>
+                </MageKenya_Paysurev>
+            </modules>
+        </translate>
+    </frontend>
+
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageKenya_Paysurev>
+                    <files>
+                        <default>MageKenya_Paysurev.csv</default>
+                    </files>
+                </MageKenya_Paysurev>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <paysurev>
+                <active>1</active>
+                <model>paysurev/checkout</model>
+                <title>Paysure | Visa</title>
+                <paysure_walletid>Enter Merchant ID Here..</paysure_walletid>
+            </paysurev>
+        </payment>
+    </default>
+</config>

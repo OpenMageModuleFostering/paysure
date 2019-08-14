@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/paysure",
+    "type": "magento-module",
+    "license": "OSL-v3.0",
+    "homepage": "",
+    "description": "MageKenya Visa and Kenswitch Payment Module for Paysure Gateway",
+    "authors": [
+    {
+        "name": "MageKenya",
+        "email": "jokuts@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

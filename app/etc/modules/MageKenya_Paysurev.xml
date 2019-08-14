@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <MageKenya_Paysurev>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Paygate/>
+                <Mage_Checkout/>
+                <Mage_Sales/>
+            </depends>
+        </MageKenya_Paysurev>
+    </modules>
+</config>

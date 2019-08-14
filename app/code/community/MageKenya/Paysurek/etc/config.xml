@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <MageKenya_Paysurek>
+            <version>0.0.1</version>
+        </MageKenya_Paysurek>
+    </modules>
+
+    <global>
+
+        <models>
+            <paysurek>
+                <class>MageKenya_Paysurek_Model</class>
+            </paysurek>
+        </models>
+
+        <blocks>
+            <paysurek>
+                <class>MageKenya_Paysurek_Block</class>
+            </paysurek>
+        </blocks>
+
+        <resources>
+            <paysure_setup>
+                <setup>
+                    <module>MageKenya_Paysurek</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </paysure_setup>
+            <paysure_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </paysure_write>
+            <paysure_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </paysure_read>
+        </resources>
+        <helpers>
+            <paysurek>
+                <class>MageKenya_Paysurek_Helper</class>
+            </paysurek>
+        </helpers>
+    </global>
+
+
+    <frontend>
+        <secure_url>
+            <paysure_redirect>/paysurek/redirect/00</paysure_redirect>
+        </secure_url>
+        <routers>
+            <paysurek>
+                <use>standard</use>
+                <args>
+                    <module>MageKenya_Paysurek</module>
+                    <frontName>paysurek</frontName>
+                </args>
+            </paysurek>
+        </routers>
+        <translate>
+            <modules>
+                <MageKenya_Paysurek>
+                    <files>
+                        <default>MageKenya_Paysurek.csv</default>
+                    </files>
+                </MageKenya_Paysurek>
+            </modules>
+        </translate>
+    </frontend>
+
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageKenya_Paysurek>
+                    <files>
+                        <default>MageKenya_Paysurek.csv</default>
+                    </files>
+                </MageKenya_Paysurek>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <paysurek>
+                <active>0</active>
+                <model>paysurek/checkout</model>
+                <title>Paysure | Kenswitch</title>
+                <paysure_walletid>Enter Merchant ID Here..</paysure_walletid>
+            </paysurek>
+        </payment>
+    </default>
+</config>
