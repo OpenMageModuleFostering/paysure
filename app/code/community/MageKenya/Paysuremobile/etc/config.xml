@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <MageKenya_Paysuremobile>
+            <version>0.0.1</version>
+        </MageKenya_Paysuremobile>
+    </modules>
+
+    <global>
+
+        <models>
+            <paysuremobile>
+                <class>MageKenya_Paysuremobile_Model</class>
+            </paysuremobile>
+        </models>
+
+        <blocks>
+            <paysuremobile>
+                <class>MageKenya_Paysuremobile_Block</class>
+            </paysuremobile>
+        </blocks>
+
+        <resources>
+            <paysure_setup>
+                <setup>
+                    <module>MageKenya_Paysuremobile</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </paysure_setup>
+            <paysure_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </paysure_write>
+            <paysure_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </paysure_read>
+        </resources>
+        <helpers>
+            <paysuremobile>
+                <class>MageKenya_Paysuremobile_Helper</class>
+            </paysuremobile>
+        </helpers>
+    </global>
+
+
+    <frontend>
+        <secure_url>
+            <paysure_redirect>/paysuremobile/redirect/00</paysure_redirect>
+        </secure_url>
+        <routers>
+            <paysuremobile>
+                <use>standard</use>
+                <args>
+                    <module>MageKenya_Paysuremobile</module>
+                    <frontName>paysuremobile</frontName>
+                </args>
+            </paysuremobile>
+        </routers>
+        <translate>
+            <modules>
+                <MageKenya_Paysuremobile>
+                    <files>
+                        <default>MageKenya_Paysuremobile.csv</default>
+                    </files>
+                </MageKenya_Paysuremobile>
+            </modules>
+        </translate>
+    </frontend>
+
+
+    <adminhtml>
+        <translate>
+            <modules>
+                <MageKenya_Paysuremobile>
+                    <files>
+                        <default>MageKenya_Paysuremobile.csv</default>
+                    </files>
+                </MageKenya_Paysuremobile>
+            </modules>
+        </translate>
+    </adminhtml>
+
+    <default>
+        <payment>
+            <paysuremobile>
+                <active>1</active>
+                <model>paysuremobile/checkout</model>
+                <title>Paysure | M-pesa</title>
+                <paysure_walletid>Enter Merchant ID Here..</paysure_walletid>
+            </paysuremobile>
+        </payment>
+    </default>
+</config>

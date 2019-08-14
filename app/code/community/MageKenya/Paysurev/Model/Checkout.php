@@ -71,7 +71,7 @@ class MageKenya_Paysurev_Model_Checkout extends Mage_Payment_Model_Method_Abstra
             $data.='<surl>'.Mage::getUrl('paysurev/redirect/success', array('refno' => $order_id)).'</surl>';
             $data.='<furl>'.Mage::getUrl('paysurev/redirect/cancel', array('refno' => $order_id)).'</furl>';
             $data.='<description>'.Mage::helper('paysurev')->__('Payment for order #').$order_id.'</description>';
-            //$data.='<currency>'.$order->getOrderCurrencyCode().'</currency>';
+            $data.='<currency>'.$order->getOrderCurrencyCode().'</currency>';
             $data.='<buyer>'.$order->getBillingAddress()->getFirstname().'  '.$order->getBillingAddress()->getLastname().'</buyer>';
           	$data.='<amount>'.str_replace(".","",(round($order->getGrandTotal(),2))).'</amount>';			
             $data.='<email>'.$email.'</email>'; 

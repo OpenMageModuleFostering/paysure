@@ -3,7 +3,8 @@
     "type": "magento-module",
     "license": "OSL-v3.0",
     "homepage": "",
-    "description": "MageKenya Visa and Kenswitch Payment Module for Paysure Gateway",
+    "description": "Paysure Gateway Payment module.
+Incorporates Visa and Kenswitch cards and M-pesa.",
     "authors": [
     {
         "name": "MageKenya",
