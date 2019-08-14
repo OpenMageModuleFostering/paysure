@@ -6,10 +6,10 @@
                 <paysuremobile translate="label" module="paysuremobile">
                     <label>Paysure | M-pesa</label>
                     <frontend_type>text</frontend_type>
-                    <sort_order>2</sort_order>
-                    <show_in_default>1</show_in_default>
-                    <show_in_website>1</show_in_website>
-                    <show_in_store>1</show_in_store>                    
+                    <sort_order>3</sort_order>
+                    <show_in_default>3</show_in_default>
+                    <show_in_website>3</show_in_website>
+                    <show_in_store>3</show_in_store>                    
                     <fields>
                         <active translate="label">
                             <label>Enabled</label>

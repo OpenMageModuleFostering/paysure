@@ -24,7 +24,7 @@ class MageKenya_Paysurek_Model_Checkout extends Mage_Payment_Model_Method_Abstra
 
     public function getPaysurekUrl() {
 		$url=$this->getPaysureCheckoutFormFields();
-	   $wsdl='http://196.216.64.237:8080/webdirect/onlinepay?WSDL';
+	   $wsdl='https://epayments.paysure.co.ke/webdirect/onlinepay?wsdl';
 		$client=new SoapClient($wsdl,array('trace'=>TRUE));
 		$result=$client->pickData($url);
 	   
